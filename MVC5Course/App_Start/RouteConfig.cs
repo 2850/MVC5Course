@@ -15,10 +15,8 @@ namespace MVC5Course
 
             routes.MapRoute(
                 name: "Default",
-                url: "{myparam}/{action}/{mydate}/{controller}/{id}",
+                url: "{controller}/{action}/{id}",
                 defaults: new {
-                    mydate = DateTime.Today.ToString(),
-                    myparam = "test",
                     controller = "Home",
                     action = "Index",
                     id = UrlParameter.Optional }
